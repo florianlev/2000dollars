@@ -32,25 +32,27 @@ public class ControleActions : MonoBehaviour
     {
         //float move = Input.GetAxis("Vertical");
         //animator.SetFloat("vitesse", move);
-        targetPosition = positionJoueur;
 
-        if (Input.GetMouseButton(0))
+        if ( !GestionLevel.pause)
         {
-            positionJoueur = GameObject.Find("Player").transform.position;
-            setPositionAveugle();
+            targetPosition = positionJoueur;
+
+            if (Input.GetMouseButton(0))
+            {
+                positionJoueur = GameObject.Find("Player").transform.position;
+                setPositionAveugle();
+            }
+            if (Input.GetMouseButton(1))
+            {
+                stopAveugle();
+            }
+
+            if (enMouvement)
+            {
+                mouvementAveugle();
+
+            }
         }
-        if (Input.GetMouseButton(1))
-        {
-            stopAveugle();
-        }
-
-        if (enMouvement)
-        {
-            mouvementAveugle();
-
-        }
-
-
     }
 
     void setPositionAveugle()

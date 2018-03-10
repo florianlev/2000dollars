@@ -11,8 +11,6 @@ public class CompteARebours : MonoBehaviour
 
     public Text compteAReboursAffichage;
 
-    public static bool pause = false;
-
     private void Awake()
     {
         compteAReboursAffichage = GetComponent<Text>();
@@ -46,7 +44,7 @@ public class CompteARebours : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( !pause )
+        if ( !GestionLevel.pause )
         {
             compteARebours = compteARebours - Time.deltaTime;
 

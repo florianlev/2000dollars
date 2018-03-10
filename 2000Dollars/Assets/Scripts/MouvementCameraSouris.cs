@@ -20,14 +20,20 @@ public class MouvementCameraSouris : MonoBehaviour {
             Cursor.visible = false;
         }
 		
-	}
+	}   
 	
 	// Update is called once per frame
 	void Update () {
-        float newRotationY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * GestionLevel.sensibiliteSouris;
-        float newRotationX = transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * GestionLevel.sensibiliteSouris;
+        if ( !GestionLevel.pause)
+        {
+            float newRotationY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * GestionLevel.sensibiliteSouris;
+            float newRotationX = transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * GestionLevel.sensibiliteSouris;
 
-        gameObject.transform.localEulerAngles = new Vector3(newRotationX, newRotationY, 0);
+            gameObject.transform.localEulerAngles = new Vector3(newRotationX, newRotationY, 0);
+
+        }
+
+ 
         /*rotationX = Input.GetAxis("Mouse Y") * sensibilite;
         rotationY = Input.GetAxis("Mouse X") * sensibilite;
 

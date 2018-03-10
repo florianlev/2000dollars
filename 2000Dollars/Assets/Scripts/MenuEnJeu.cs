@@ -10,9 +10,9 @@ public class MenuEnJeu : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            CompteARebours.pause = !CompteARebours.pause;
+            GestionLevel.pause = !GestionLevel.pause;
             Cursor.visible = !Cursor.visible;
-            pause.SetActive(CompteARebours.pause);
+            pause.SetActive(GestionLevel.pause);
         }
     }
 }

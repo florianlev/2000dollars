@@ -21,23 +21,28 @@ public class DeplacementPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ( !GestionLevel.pause)
+        {
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(-Vector3.right * Time.deltaTime * vitesse);
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(-Vector3.right * Time.deltaTime * vitesse);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(0, 0, -(vitesse / 2) * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.Translate(0, 0, vitesse * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(Vector3.right * Time.deltaTime * vitesse);
+            }
+
         }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(0, 0, -(vitesse / 2) * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(0, 0, vitesse * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(Vector3.right * Time.deltaTime * vitesse);
-        }
+
 
 
     }

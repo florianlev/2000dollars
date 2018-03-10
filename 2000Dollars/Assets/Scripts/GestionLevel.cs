@@ -15,6 +15,10 @@ public class GestionLevel : MonoBehaviour {
      * 
      * */
 
+    //----------- PAUSE --------------------------
+
+    public static bool pause;
+
     //----------- SENSIBILITE SOURIS --------------
     public static float sensibiliteSouris=5;
 
