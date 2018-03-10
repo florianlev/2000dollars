@@ -23,8 +23,19 @@ public class CollisionsObstacles : MonoBehaviour {
         if (collider.gameObject.tag == "obstacleFatale")
         {
             animator.SetBool("estTomber", true);
-            GestionLevel.collisonObstacleFatal();
+            //StartCoroutine(attendreFin());
+
+            //GestionLevel.collisonObstacleFatal();
+
+
 
         }
+    }
+
+    IEnumerator attendreFin()
+    {
+        Debug.Log("Before Waiting 2 seconds");
+        yield return new WaitForSeconds(2);
+        Debug.Log("After Waiting 2 Seconds");
     }
 }
