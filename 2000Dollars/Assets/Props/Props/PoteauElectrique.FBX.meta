@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4e01d1e99786e0f40afb2cb20acaee94
-timeCreated: 1520655203
+guid: 76a5ab23a7401e84a8fe0f27bd1e98ae
+timeCreated: 1520724805
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -10,8 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: lumiere
-    7400000: Take 001
+    4300000: PoteauElectrique
     9500000: //RootNode
   externalObjects: {}
   materials:

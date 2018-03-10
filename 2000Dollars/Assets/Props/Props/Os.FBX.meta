@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a6df2cdc0dbcadb49bba4436cddda9ff
-timeCreated: 1520706059
+guid: cb4adcad626771945b97ec9cdc9e5a32
+timeCreated: 1520724806
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: BarriereTravaux
+    4300000: Box002
     9500000: //RootNode
   externalObjects: {}
   materials:
