@@ -5247,7 +5247,7 @@ GameObject:
   - component: {fileID: 1334433135}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: obstacleFatale
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5653,7 +5653,7 @@ GameObject:
   - component: {fileID: 1519997269}
   m_Layer: 0
   m_Name: Fatale_Object
-  m_TagString: Untagged
+  m_TagString: obstacleFatale
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6696,6 +6696,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1807107487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807107483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da91d460342711a47953873f5ce41b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1813694484
 Prefab:
   m_ObjectHideFlags: 0
