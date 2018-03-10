@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,7 +34,9 @@ public class CompteARebours : MonoBehaviour
 
         compteARebours = compteARebours - Time.timeSinceLevelLoad;
 
-        compteAReboursAffichage.text = "Temps restant : "+compteARebours;
+        compteAReboursAffichage.text = "Temps restant : "+ (int) Math.Ceiling(compteARebours);
+
+        if (compteARebours < 0) finCompteARebours();
 
     }
 
@@ -43,6 +46,7 @@ public class CompteARebours : MonoBehaviour
 
         compteAReboursAffichage.text = "Game Over !";
 
+        GameObject.Find("Canvas").GetComponent<Text>().text = compteAReboursAffichage.text;
     }
 
 }
