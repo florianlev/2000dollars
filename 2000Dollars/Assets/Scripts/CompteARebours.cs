@@ -32,7 +32,7 @@ public class CompteARebours : MonoBehaviour
     void Update()
     {
 
-        compteARebours = compteARebours - Time.timeSinceLevelLoad;
+        compteARebours = compteARebours - Time.deltaTime;
 
         compteAReboursAffichage.text = "Temps restant : "+ (int) Math.Ceiling(compteARebours);
 
