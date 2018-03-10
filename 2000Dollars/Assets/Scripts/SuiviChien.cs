@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SuiviChien : MonoBehaviour {
+public class SuiviChien : MonoBehaviour
+{
 
 
     public GameObject cible;
@@ -10,35 +11,41 @@ public class SuiviChien : MonoBehaviour {
     private Rigidbody body;
     private Vector3 targetPosition;
     private bool enMouvement;
+    private Vector3 positionJoueur;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
-        targetPosition = transform.position;
+
         enMouvement = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
 
-        if(Input.GetMouseButton(0))
+    // Update is called once per frame
+    void Update()
+    {
+
+        positionJoueur = GameObject.Find("Chien").transform.position;
+        targetPosition = positionJoueur;
+
+        if (Input.GetMouseButton(0))
         {
-            setPositionAveugle();    
+            setPositionAveugle();
         }
-        if(Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1))
         {
             stopAveugle();
         }
 
-        if(enMouvement)
+        if (enMouvement)
         {
             mouvementAveugle();
 
         }
-	
 
-	}
+
+    }
 
     void setPositionAveugle()
     {
@@ -55,10 +62,12 @@ public class SuiviChien : MonoBehaviour {
 
     void mouvementAveugle()
     {
-        transform.LookAt(targetPosition);
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, vitesse * Time.deltaTime);
 
-        if(transform.position == targetPosition)
+
+        transform.LookAt(positionJoueur);
+        transform.position = Vector3.MoveTowards(transform.position, positionJoueur, vitesse * Time.deltaTime);
+
+        if (transform.position == targetPosition)
         {
             enMouvement = false;
         }
