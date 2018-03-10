@@ -35,7 +35,7 @@ public class Collision : MonoBehaviour {
                 GestionLevel.collisionObstacleNonFatal();
                 break;
 
-            case "obstaceFatal":
+            case "obstacleFatal":
                 GestionLevel.collisonObstacleFatal();
                 break;
 
