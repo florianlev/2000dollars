@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GestionLevel : MonoBehaviour {
+public class GestionLevel : MonoBehaviour
+{
 
     /**
      *   INDEX DE SCENE
@@ -15,22 +16,32 @@ public class GestionLevel : MonoBehaviour {
      * 
      * */
 
-    //----------- PAUSE --------------------------
+    //----------- GESTION DU TEMPS --------------------------
 
-    public static bool pause;
+    public static bool pause = false;
+
+    public static float[] tableau_temps_lvl = new float[] { 120f, 120f, 120f };
 
     //----------- SENSIBILITE SOURIS --------------
-    public static float sensibiliteSouris=5;
+    public static float sensibiliteSouris = 5;
 
     private const int SCENE_DEPART = 1;
     private const int VIE_DEPART = 3;
     private const float VITESSE = 10f;
     private const float PORTE_AUDITION = 2000f;
 
+    //----------- GESTION DES SCENES --------------------
+
     public static int sceneCourante = SCENE_DEPART;
+
+    //------------ CARACTERISTIQUES AVEUGLE---------------
+
     public static int vieCourante = VIE_DEPART;
     public static float vitesseCourante = VITESSE;
     public static float porteeAuditionCourante = PORTE_AUDITION;
+
+    //------------ CARACTERISTIQUES CHIEN---------------
+
 
     //----------- BONUS & MALUS ----------------
 
@@ -65,6 +76,7 @@ public class GestionLevel : MonoBehaviour {
      * */
     public static int usActif = 0;
 
+
     //------------- DEBUT NIVEAU ----------------------
 
     public static void recommencer()
@@ -78,18 +90,18 @@ public class GestionLevel : MonoBehaviour {
 
     public void Update()
     {
-        
-        if ( vieCourante  < 0)
+
+        if (vieCourante < 0)
         {
             sceneCourante = 4;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(GestionLevel.sceneCourante);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
 
         }
 
         switch (usActif)
         {
             case 0:
-                    break;
+                break;
 
             case 1:
 
@@ -112,8 +124,6 @@ public class GestionLevel : MonoBehaviour {
                 gestionMalusSourd();
                 break;
         }
-
-
 
     }
 
@@ -192,8 +202,8 @@ public class GestionLevel : MonoBehaviour {
     private void gestionBonusLunettes()
     {
         tempsCourantBonusLunettes -= Time.deltaTime;
-        
-        if ( tempsCourantBonusLunettes < 0)
+
+        if (tempsCourantBonusLunettes < 0)
         {
             bonusLunettes = false;
             tempsCourantBonusLunettes = 0f;
@@ -207,13 +217,13 @@ public class GestionLevel : MonoBehaviour {
 
         tempsCourantBonusBallon -= Time.deltaTime;
 
-        if ( tempsCourantBonusBallon  < 0)
+        if (tempsCourantBonusBallon < 0)
         {
             bonusBallon = false;
             tempsCourantBonusBallon = 0f;
             usActif = 0;
         }
-   
+
     }
 
     private void gestionMalusOs()

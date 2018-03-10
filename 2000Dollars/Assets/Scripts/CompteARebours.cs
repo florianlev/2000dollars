@@ -20,7 +20,7 @@ public class CompteARebours : MonoBehaviour
     void Start()
     {
 
-        compteARebours = 120f;
+        compteARebours = GestionLevel.tableau_temps_lvl[GestionLevel.sceneCourante + 1];
 
         int tempsEntier = (int)Math.Ceiling(compteARebours);
 
@@ -28,9 +28,10 @@ public class CompteARebours : MonoBehaviour
 
         int minutes = tempsEntier / 60;
 
-        if ( secondes < 10 ){
+        if (secondes < 10)
+        {
 
-            compteAReboursAffichage.text = "Temps restant: 0" + minutes + "m, 0" + secondes+"s";
+            compteAReboursAffichage.text = "Temps restant: 0" + minutes + "m, 0" + secondes + "s";
 
         }
         else
@@ -44,7 +45,7 @@ public class CompteARebours : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( !GestionLevel.pause )
+        if (!GestionLevel.pause)
         {
             compteARebours = compteARebours - Time.deltaTime;
 
