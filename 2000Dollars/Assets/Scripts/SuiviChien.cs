@@ -6,7 +6,7 @@ public class SuiviChien : MonoBehaviour {
 
 
     public GameObject cible;
-    public static float vitesse = 1.25f;
+    public static float vitesse = 5.25f;
     private Rigidbody body;
     private Vector3 targetPosition;
     private bool enMouvement;
@@ -30,13 +30,41 @@ public class SuiviChien : MonoBehaviour {
         {
             stopAveugle();
         }
+
+        if(enMouvement)
+        {
+            mouvementAveugle();
+
+        }
 	
 
 	}
 
     void setPositionAveugle()
     {
+
+        Plane plane = new Plane(Vector3.up, transform.position);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        float point = 0f;
+
+        if (plane.Raycast(ray, out point))
+            targetPosition = ray.GetPoint(point);
+
+        enMouvement = true;
     }
+
+    void mouvementAveugle()
+    {
+        transform.LookAt(targetPosition);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, vitesse * Time.deltaTime);
+
+        if(transform.position == targetPosition)
+        {
+            enMouvement = false;
+        }
+    }
+
+
 
     void stopAveugle()
     {
