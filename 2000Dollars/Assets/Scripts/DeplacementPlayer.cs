@@ -6,7 +6,7 @@ public class DeplacementPlayer : MonoBehaviour
 {
 
     private Vector3 deplacement;
-    public float speed = 10;
+    public float vitesse = 10;
     BoxCollider playerCollider;
     private Rigidbody body;
     // Use this for initialization
@@ -21,27 +21,24 @@ public class DeplacementPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        deplacement = Vector3.zero;
-
 
         if (Input.GetKey(KeyCode.A))
         {
-            deplacement += -transform.right;
+            transform.Rotate(0, -vitesse, 0);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            deplacement += -transform.forward;
+            transform.Translate(0, 0, -(vitesse / 2) * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.W))
         {
-            deplacement += transform.forward;
+            transform.Translate(0, 0, vitesse * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            deplacement += transform.right;
+            transform.Rotate(0, vitesse, 0);
         }
 
-        transform.position += deplacement * speed * Time.deltaTime;
 
     }
 }
