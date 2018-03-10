@@ -235,7 +235,32 @@ ModelImporter:
     9500000: //RootNode
     13700000: Tut_Mesh_body_001
     13700002: Tut_mesh_canne
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_Eye_001
+    second: {fileID: 2100000, guid: f347686f64653e343ae5daa564a78351, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_Eye_002
+    second: {fileID: 2100000, guid: 79c4247d075090a4db0f8cac9d73ea66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_Mat_001
+    second: {fileID: 2100000, guid: ed7facc42e2c832408f46b759809b140, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_canne
+    second: {fileID: 2100000, guid: 336cd2f3e9eb33849a3315c8c527d805, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_lunette
+    second: {fileID: 2100000, guid: 30482f782e84d7c43bebd5258698c0f5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

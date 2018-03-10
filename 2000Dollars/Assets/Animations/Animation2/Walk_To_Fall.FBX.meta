@@ -225,7 +225,12 @@ ModelImporter:
     9500000: //RootNode
     13700000: Tut_Mesh_body_001
     13700002: Tut_mesh_canne
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_canne
+    second: {fileID: 2100000, guid: 336cd2f3e9eb33849a3315c8c527d805, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
