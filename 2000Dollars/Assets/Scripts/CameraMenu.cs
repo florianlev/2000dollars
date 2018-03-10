@@ -31,13 +31,13 @@ public class CameraMenu : MonoBehaviour {
 
         transform.position -= Vector3.left * vitesse * Time.deltaTime;
 
-        if (transform.position.x > 40)
+        if (transform.position.x > 60)
         {
             debut = false;
             vitesse = -vitesse;
 
         }
-        if (transform.position.x > 20)
+        if (transform.position.x > 40)
         {
             transform.Rotate(0, Time.deltaTime * vitesseRotation, 0);
         }
