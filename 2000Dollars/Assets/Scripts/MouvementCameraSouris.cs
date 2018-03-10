@@ -24,8 +24,8 @@ public class MouvementCameraSouris : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float newRotationY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * Sensibilite;
-        float newRotationX = transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * Sensibilite;
+        float newRotationY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * GestionLevel.sensibiliteSouris;
+        float newRotationX = transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * GestionLevel.sensibiliteSouris;
 
         gameObject.transform.localEulerAngles = new Vector3(newRotationX, newRotationY, 0);
         /*rotationX = Input.GetAxis("Mouse Y") * sensibilite;
