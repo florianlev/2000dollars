@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1107560095580014}
+  m_RootGameObject: {fileID: 1361516461346798}
   m_IsPrefabParent: 1
---- !u!1 &1107560095580014
+--- !u!1 &1361516461346798
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4639432131471426}
-  - component: {fileID: 65709068555759942}
+  - component: {fileID: 4483727795934674}
+  - component: {fileID: 65492082749917228}
   m_Layer: 0
   m_Name: objetGoPosition
   m_TagString: Untagged
@@ -27,25 +27,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4639432131471426
+--- !u!4 &4483727795934674
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1107560095580014}
+  m_GameObject: {fileID: 1361516461346798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0277786, y: 0.61, z: 1.1293755}
+  m_LocalPosition: {x: -1.0277786, y: 0.336, z: -13.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &65709068555759942
+--- !u!65 &65492082749917228
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1107560095580014}
+  m_GameObject: {fileID: 1361516461346798}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
