@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class MenuEnJeu : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+    public GameObject pause;
+
 	void Update () {
-		
-	}
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            CompteARebours.pause = !CompteARebours.pause;
+            Cursor.visible = !Cursor.visible;
+            pause.SetActive(CompteARebours.pause);
+        }
+    }
 }
