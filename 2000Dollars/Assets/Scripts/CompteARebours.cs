@@ -72,9 +72,8 @@ public class CompteARebours : MonoBehaviour
     void finCompteARebours()
     {
 
-        compteAReboursAffichage.text = "Game Over !";
-
-        GameObject.Find("Canvas").GetComponent<Text>().text = compteAReboursAffichage.text;
+        Cursor.visible = true;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
     }
 
 }

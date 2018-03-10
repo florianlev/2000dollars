@@ -10,16 +10,11 @@ public class CameraMenu : MonoBehaviour {
 
     public float vitesseRotation;
 
-    public bool showCursor;
-
     private bool debut = true; 
 
     private void Awake()
     {
-        if ( showCursor == false)
-        {
-            Cursor.visible = true;
-        }
+
         camera = GetComponent<Camera>();
         vitesse = 2f;
         vitesseRotation = 3f;   
