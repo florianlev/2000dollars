@@ -7,30 +7,36 @@ public class ControleActions : MonoBehaviour
 
 
     public GameObject cible;
-    public static float vitesse = 5.25f;
+    public static float vitesse = 1.25f;
     private Rigidbody body;
     private Vector3 targetPosition;
+    private Animator animator;
     private bool enMouvement;
     private Vector3 positionJoueur;
 
+    void Awake()
+    {
 
+
+    }
     // Use this for initialization
     void Start()
     {
 
-
+        animator = gameObject.GetComponent<Animator>();
         enMouvement = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        positionJoueur = GameObject.Find("Chien").transform.position;
+        //float move = Input.GetAxis("Vertical");
+        //animator.SetFloat("vitesse", move);
         targetPosition = positionJoueur;
 
         if (Input.GetMouseButton(0))
         {
+            positionJoueur = GameObject.Find("Player").transform.position;
             setPositionAveugle();
         }
         if (Input.GetMouseButton(1))
@@ -65,6 +71,7 @@ public class ControleActions : MonoBehaviour
 
 
         transform.LookAt(positionJoueur);
+        print(positionJoueur);
         transform.position = Vector3.MoveTowards(transform.position, positionJoueur, vitesse * Time.deltaTime);
 
         if (transform.position == targetPosition)
