@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Reesayer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void Ressayer()
+    {
+
+        print("test");
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level "+GestionLevel.level);
+    }
+
 }
