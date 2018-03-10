@@ -10,10 +10,16 @@ public class CompteARebours : MonoBehaviour
 
     public Text compteAReboursAffichage;
 
+    private void Awake()
+    {
+        compteAReboursAffichage = GetComponent<Text>();
+    }
 
     // Use this for initialization
     void Start()
     {
+
+        print("hello");
 
         compteARebours = 120f;
 
@@ -27,8 +33,7 @@ public class CompteARebours : MonoBehaviour
 
         compteARebours = compteARebours - Time.timeSinceLevelLoad;
 
-        compteAReboursAffichage.text = "Temps restant : " + compteARebours;
-
+        compteAReboursAffichage.text = "Temps restant : "+compteARebours;
 
     }
 
@@ -36,7 +41,7 @@ public class CompteARebours : MonoBehaviour
     void finCompteARebours()
     {
 
-        compteAReboursAffichage = "Game Over !";
+        compteAReboursAffichage.text = "Game Over !";
 
     }
 
