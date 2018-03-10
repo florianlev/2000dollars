@@ -376,7 +376,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 28597d5ed5d6827488875a98018475cc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.287
+      value: -11.12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 28597d5ed5d6827488875a98018475cc, type: 3}
       propertyPath: m_LocalRotation.x
@@ -865,14 +865,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1649953378}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.7067008, z: -0, w: 0.70751256}
   m_LocalPosition: {x: 5.881, y: 0.902, z: -20.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 388055482}
   m_Father: {fileID: 0}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 89.934006, z: 0}
 --- !u!114 &1649953380
 MonoBehaviour:
   m_ObjectHideFlags: 0
