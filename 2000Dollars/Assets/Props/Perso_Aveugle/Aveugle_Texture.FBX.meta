@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 150d7741d49498142b5f4bab4a1ee4a4
+timeCreated: 1520712540
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Tut_bone_eye_L_001
+    100004: Tut_bone_eye_R_001
+    100006: Tut_bone_head_001
+    100008: Tut_bone_head_002
+    100010: Tut_bone_lunette_001
+    100012: Tut_bone_spine_001
+    100014: Tut_bone_spine_002
+    100016: Tut_bone_spine_003
+    100018: Tut_ctrl_GOG_001
+    100020: Tut_ctrl_head_001
+    100022: Tut_ctrl_head_002
+    100024: Tut_ctrl_lunette_001
+    100026: Tut_ctrl_spine_001
+    100028: Tut_ctrl_spine_002
+    100030: Tut_ctrl_spine_003
+    100032: Tut_Global_SRT_001
+    100034: Tut_Mesh_body_001
+    100036: Tut_mesh_canne
+    100038: Tut_mesh_lunette
+    100040: Tut_Mesh_oeil_L_001
+    100042: Tut_Mesh_oeil_R_001
+    400000: //RootNode
+    400002: Tut_bone_eye_L_001
+    400004: Tut_bone_eye_R_001
+    400006: Tut_bone_head_001
+    400008: Tut_bone_head_002
+    400010: Tut_bone_lunette_001
+    400012: Tut_bone_spine_001
+    400014: Tut_bone_spine_002
+    400016: Tut_bone_spine_003
+    400018: Tut_ctrl_GOG_001
+    400020: Tut_ctrl_head_001
+    400022: Tut_ctrl_head_002
+    400024: Tut_ctrl_lunette_001
+    400026: Tut_ctrl_spine_001
+    400028: Tut_ctrl_spine_002
+    400030: Tut_ctrl_spine_003
+    400032: Tut_Global_SRT_001
+    400034: Tut_Mesh_body_001
+    400036: Tut_mesh_canne
+    400038: Tut_mesh_lunette
+    400040: Tut_Mesh_oeil_L_001
+    400042: Tut_Mesh_oeil_R_001
+    2100000: Base_Mat_001
+    2100002: Mat_lunette
+    2100004: Base_Eye_001
+    2100006: Base_Eye_002
+    2100008: Mat_canne
+    2300000: Tut_mesh_canne
+    2300002: Tut_mesh_lunette
+    2300004: Tut_Mesh_oeil_L_001
+    2300006: Tut_Mesh_oeil_R_001
+    3300000: Tut_mesh_canne
+    3300002: Tut_mesh_lunette
+    3300004: Tut_Mesh_oeil_L_001
+    3300006: Tut_Mesh_oeil_R_001
+    4300000: Tut_Mesh_body_001
+    4300002: Tut_mesh_lunette
+    4300004: Tut_Mesh_oeil_R_001
+    4300006: Tut_Mesh_oeil_L_001
+    4300008: Tut_mesh_canne
+    9500000: //RootNode
+    13700000: Tut_Mesh_body_001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_Eye_001
+    second: {fileID: 2100000, guid: f347686f64653e343ae5daa564a78351, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_Eye_002
+    second: {fileID: 2100000, guid: 79c4247d075090a4db0f8cac9d73ea66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base_Mat_001
+    second: {fileID: 2100000, guid: ed7facc42e2c832408f46b759809b140, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_canne
+    second: {fileID: 2100000, guid: 336cd2f3e9eb33849a3315c8c527d805, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_lunette
+    second: {fileID: 2100000, guid: 30482f782e84d7c43bebd5258698c0f5, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
