@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 7d39c5b23e03fbe4a933065e4a356ec3
-timeCreated: 1520674108
+guid: 4c023baf52321614e8eab5b0381ca6d7
+timeCreated: 1520675004
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Banc
+    4300000: Section_RueTrottoir
     9500000: //RootNode
   externalObjects: {}
   materials:

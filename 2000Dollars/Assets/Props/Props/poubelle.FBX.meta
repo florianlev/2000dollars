@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 271ef52bc9c02f6429bea03a833a1e25
-timeCreated: 1520655329
+guid: 330a9612652c15143a1ff9959f77aff2
+timeCreated: 1520674114
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -10,8 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: poubelle
-    7400000: Take 001
+    4300000: Poubelle
     9500000: //RootNode
   externalObjects: {}
   materials:
