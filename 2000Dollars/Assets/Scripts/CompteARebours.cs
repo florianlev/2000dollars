@@ -20,11 +20,24 @@ public class CompteARebours : MonoBehaviour
     void Start()
     {
 
-        print("hello");
-
         compteARebours = 120f;
 
-        compteAReboursAffichage.text = "Temps restant : " + compteARebours;
+        int tempsEntier = (int)Math.Ceiling(compteARebours);
+
+        int secondes = tempsEntier % 60;
+
+        int minutes = tempsEntier / 60;
+
+        if ( secondes < 10 ){
+
+            compteAReboursAffichage.text = "Temps restant: 0" + minutes + "m, 0" + secondes+"s";
+
+        }
+        else
+        {
+            compteAReboursAffichage.text = "Temps restant: 0" + minutes + "m, " + secondes + "s";
+
+        }
 
     }
 
@@ -34,7 +47,22 @@ public class CompteARebours : MonoBehaviour
 
         compteARebours = compteARebours - Time.deltaTime;
 
-        compteAReboursAffichage.text = "Temps restant : "+ (int) Math.Ceiling(compteARebours);
+        int tempsEntier = (int)Math.Ceiling(compteARebours);
+
+        int secondes = tempsEntier % 60;
+
+        int minutes = tempsEntier / 60;
+
+        if (secondes < 10 ){
+
+            compteAReboursAffichage.text = "Temps restant: 0" + minutes + "m, 0" + secondes + "s";
+
+        }
+        else
+        {
+            compteAReboursAffichage.text = "Temps restant: 0" + minutes + "m, " + secondes + "s";
+
+        }
 
         if (compteARebours < 0) finCompteARebours();
 
