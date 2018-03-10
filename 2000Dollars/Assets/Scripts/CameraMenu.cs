@@ -8,11 +8,17 @@ public class CameraMenu : MonoBehaviour {
 
     public float vitesse;
 
+    public bool showCursor;
+
     private void Awake()
     {
-
+        print(Cursor.visible);
+        if ( showCursor == false)
+        {
+            Cursor.visible = true;
+        }
         camera = GetComponent<Camera>();
-        vitesse = 20f;
+        vitesse = 2f;
 
     }
 
@@ -24,7 +30,7 @@ public class CameraMenu : MonoBehaviour {
 	
 	void Update () {
 
-        transform.position += Vector3.forward * vitesse * Time.deltaTime;
+        transform.position -= Vector3.left * vitesse * Time.deltaTime;
 
 
 	}
