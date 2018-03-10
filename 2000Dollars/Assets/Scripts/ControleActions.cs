@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SuiviChien : MonoBehaviour
+public class ControleActions : MonoBehaviour
 {
 
 

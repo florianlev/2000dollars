@@ -205,9 +205,8 @@ GameObject:
   - component: {fileID: 219933581}
   - component: {fileID: 219933580}
   - component: {fileID: 219933579}
-  - component: {fileID: 219933583}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Chien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,18 +279,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &219933583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 219933578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270e792e409334149aca2266fd2574c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cible: {fileID: 0}
 --- !u!1 &1053402494
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,9 +440,10 @@ GameObject:
   - component: {fileID: 1301363861}
   - component: {fileID: 1301363860}
   - component: {fileID: 1301363859}
+  - component: {fileID: 1301363862}
   - component: {fileID: 1301363858}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Aveugle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -527,3 +515,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1301363862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1301363857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270e792e409334149aca2266fd2574c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cible: {fileID: 219933578}
