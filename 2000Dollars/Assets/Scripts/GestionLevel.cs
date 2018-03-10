@@ -16,7 +16,7 @@ public class GestionLevel : MonoBehaviour {
      * */
 
     //----------- SENSIBILITE SOURIS --------------
-    public static float sensibiliteSouris;
+    public static float sensibiliteSouris=5;
 
     private const int SCENE_DEPART = 1;
     private const int VIE_DEPART = 3;
