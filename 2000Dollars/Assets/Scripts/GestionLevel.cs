@@ -58,6 +58,7 @@ public class GestionLevel : MonoBehaviour {
      * */
     public static int usActif = 0;
 
+    //------------- DEBUT NIVEAU ----------------------
 
     public static void recommencer()
     {
@@ -66,6 +67,7 @@ public class GestionLevel : MonoBehaviour {
 
     }
 
+    //-------------- UPDATE ---------------------------
 
     public void Update()
     {
@@ -107,6 +109,8 @@ public class GestionLevel : MonoBehaviour {
 
 
     }
+
+    //------------- DECLENCHEMENT DES US --------------------
 
     public static void declencherBonusLunettes()
     {
@@ -159,11 +163,22 @@ public class GestionLevel : MonoBehaviour {
 
     }
 
-    public static void collisionObstacleFatal()
+    public static void collisonObstacleFatal()
     {
         vieCourante = 0;
 
     }
+
+    //--------------- FIN DU NIVEAU ------------------------
+
+    public static void finNiveau()
+    {
+
+        vitesseCourante = 0f;
+        usActif = 0;
+
+    }
+
 
     //------------- GESTION DES US -------------------------
 

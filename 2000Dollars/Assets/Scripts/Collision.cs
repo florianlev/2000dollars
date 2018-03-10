@@ -36,8 +36,14 @@ public class Collision : MonoBehaviour {
                 break;
 
             case "obstaceFatal":
-                GestionLevel.collisonObstacleFatale();
+                GestionLevel.collisonObstacleFatal();
                 break;
+
+            case "finNiveau":
+                GestionLevel.finNiveau();
+                break;
+
+                //test
         }
 
     }
