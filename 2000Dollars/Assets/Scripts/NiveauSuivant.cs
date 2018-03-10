@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class NiveauSuivant : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void niveauSuivant()
+    {
+
+        GestionLevel.sceneCourante++;
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(GestionLevel.sceneCourante);
+
+    }
 }

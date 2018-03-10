@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class GestionLevel : MonoBehaviour {
 
+    /**
+     *   INDEX DE SCENE
+     * Menu début de jeu___0
+     * Niveau 1____________1
+     * Niveau 2____________2
+     * Niveau 3____________3
+     * Fin de niveau_______4
+     * Game Over___________5
+     * 
+     * */
 
     private const int SCENE_DEPART = 1;
     private const int VIE_DEPART = 3;
@@ -24,11 +34,11 @@ public class GestionLevel : MonoBehaviour {
     private const int TEMPS_MALUS_VITESSE = 10;
     private const int TEMPS_MALUS_SOURD = 10;
 
-    private float tempsCourantBonusLunettes = 0;
-    private float tempsCourantBonusBallon = 0;
-    private float tempsCourantMalusOs = 0;
-    private float tempsCourantMalusVitesse = 0;
-    private float tempsCourantMalusSourd = 0;
+    private static float tempsCourantBonusLunettes = 0;
+    private static float tempsCourantBonusBallon = 0;
+    private static float tempsCourantMalusOs = 0;
+    private static float tempsCourantMalusVitesse = 0;
+    private static float tempsCourantMalusSourd = 0;
 
 
     public static bool bonusLunettes = false;
@@ -98,7 +108,7 @@ public class GestionLevel : MonoBehaviour {
 
     }
 
-    public void declencherBonusLunettes()
+    public static void declencherBonusLunettes()
     {
         bonusLunettes = true;
         usActif = 1;
@@ -106,21 +116,21 @@ public class GestionLevel : MonoBehaviour {
 
     }
 
-    public void declencherBonusBallon()
+    public static void declencherBonusBallon()
     {
         usActif = 2;
         bonusBallon = true;
         tempsCourantBonusBallon = TEMPS_BONUS_BALLON;
     }
 
-    public void declancherMalusOs()
+    public static void declancherMalusOs()
     {
         usActif = 3;
         malusOs = true;
         tempsCourantMalusOs = TEMPS_MALUS_OS;
     }
 
-    public void declancherMalusVitesse()
+    public static void declancherMalusVitesse()
     {
         usActif = 4;
         malusVitesse = true;
@@ -128,7 +138,7 @@ public class GestionLevel : MonoBehaviour {
         vitesseCourante = 40f;
     }
 
-    public void declancherMalusSourd()
+    public static void declancherMalusSourd()
     {
         usActif = 5;
         malusSourd = true;
@@ -136,12 +146,24 @@ public class GestionLevel : MonoBehaviour {
         porteeAuditionCourante = 1000f;
     }
 
-    public void declancherBonusCanne()
+    public static void declancherBonusCanne()
     {
         if (vieCourante < 3) vieCourante++;
     }
 
+    //-------------- COLLISION ---------------------------
 
+    public static void collisionObstacleNonFatal()
+    {
+        vieCourante -= 1;
+
+    }
+
+    public static void collisionObstacleFatal()
+    {
+        vieCourante = 0;
+
+    }
 
     //------------- GESTION DES US -------------------------
 
