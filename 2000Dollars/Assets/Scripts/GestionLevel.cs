@@ -7,9 +7,13 @@ public class GestionLevel : MonoBehaviour {
 
     private const int SCENE_DEPART = 1;
     private const int VIE_DEPART = 3;
+    private const float VITESSE = 10f;
+    private const float PORTE_AUDITION = 2000f;
 
     public static int sceneCourante = SCENE_DEPART;
     public static int vieCourante = VIE_DEPART;
+    public static float vitesseCourante = VITESSE;
+    public static float porteeAuditionCourante = PORTE_AUDITION;
 
     //----------- BONUS & MALUS ----------------
 
@@ -70,24 +74,23 @@ public class GestionLevel : MonoBehaviour {
 
             case 1:
 
-                tempsCourantBonusLunettes -= Time.deltaTime;
-
+                gestionBonusLunettes();
                 break;
 
             case 2:
-                tempsCourantBonusBallon -= Time.deltaTime;
+                gestionBonusBallon();
                 break;
 
             case 3:
-                tempsCourantMalusOs -= Time.deltaTime;
+                gestionMalusOs();
                 break;
 
             case 4:
-                tempsCourantMalusVitesse -= Time.deltaTime;
+                gestionMalusVitesse();
                 break;
 
             case 5:
-                tempsCourantMalusSourd -= Time.deltaTime;
+                gestionMalusSourd();
                 break;
         }
 
@@ -99,7 +102,6 @@ public class GestionLevel : MonoBehaviour {
     {
         bonusLunettes = true;
         usActif = 1;
-
         tempsCourantBonusLunettes = TEMPS_BONUS_LUNETTES;
 
     }
@@ -123,6 +125,7 @@ public class GestionLevel : MonoBehaviour {
         usActif = 4;
         malusVitesse = true;
         tempsCourantMalusVitesse = TEMPS_MALUS_VITESSE;
+        vitesseCourante = 40f;
     }
 
     public void declancherMalusSourd()
@@ -130,6 +133,7 @@ public class GestionLevel : MonoBehaviour {
         usActif = 5;
         malusSourd = true;
         tempsCourantMalusSourd = TEMPS_MALUS_SOURD;
+        porteeAuditionCourante = 1000f;
     }
 
     public void declancherBonusCanne()
@@ -137,26 +141,73 @@ public class GestionLevel : MonoBehaviour {
         if (vieCourante < 3) vieCourante++;
     }
 
+
+
+    //------------- GESTION DES US -------------------------
+
     private void gestionBonusLunettes()
     {
-
+        tempsCourantBonusLunettes -= Time.deltaTime;
+        
+        if ( tempsCourantBonusLunettes < 0)
+        {
+            bonusLunettes = false;
+            tempsCourantBonusLunettes = 0f;
+            usActif = 0;
+        }
 
     }
 
     private void gestionBonusBallon()
     {
 
+        tempsCourantBonusBallon -= Time.deltaTime;
 
-
+        if ( tempsCourantBonusBallon  < 0)
+        {
+            bonusBallon = false;
+            tempsCourantBonusBallon = 0f;
+            usActif = 0;
+        }
+   
     }
 
     private void gestionMalusOs()
     {
+        tempsCourantMalusOs -= Time.deltaTime;
 
-
+        if (tempsCourantMalusOs < 0)
+        {
+            malusOs = false;
+            tempsCourantMalusOs = 0f;
+            usActif = 0;
+        }
     }
 
+    private void gestionMalusVitesse()
+    {
+        tempsCourantMalusVitesse -= Time.deltaTime;
 
+        if (tempsCourantMalusVitesse < 0)
+        {
+            malusVitesse = false;
+            tempsCourantMalusVitesse = 0f;
+            usActif = 0;
+            vitesseCourante = 20f;
+        }
+    }
 
+    private void gestionMalusSourd()
+    {
+        tempsCourantMalusSourd -= Time.deltaTime;
 
+        if (tempsCourantMalusSourd < 0)
+        {
+            malusSourd = false;
+            tempsCourantMalusSourd = 0f;
+            usActif = 0;
+            porteeAuditionCourante = 2000f;
+
+        }
+    }
 }
