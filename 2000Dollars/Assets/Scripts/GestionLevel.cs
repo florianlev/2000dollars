@@ -79,24 +79,25 @@ public class GestionLevel : MonoBehaviour
 
     //------------- DEBUT NIVEAU ----------------------
 
-    public static void recommencer()
-    {
-        vieCourante = VIE_DEPART;
-        sceneCourante = SCENE_DEPART;
-
-    }
+    
 
     //-------------- UPDATE ---------------------------
-
+    public void Start()
+    {
+        
+    }
     public void Update()
     {
+        print("testr");
 
-        if (vieCourante < 0)
+        if (vieCourante <= 0)
         {
+            print("test");
             sceneCourante = 4;
             UnityEngine.SceneManagement.SceneManager.LoadScene(3);
 
         }
+
 
         switch (usActif)
         {
@@ -127,8 +128,14 @@ public class GestionLevel : MonoBehaviour
 
     }
 
-    //------------- DECLENCHEMENT DES US --------------------
+    
+    public static void recommencer()
+    {
+        vieCourante = VIE_DEPART;
+        sceneCourante = SCENE_DEPART;
 
+    }
+    //------------- DECLENCHEMENT DES US --------------------
     public static void declencherBonusLunettes()
     {
         bonusLunettes = true;

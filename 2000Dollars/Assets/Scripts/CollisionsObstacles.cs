@@ -23,6 +23,7 @@ public class CollisionsObstacles : MonoBehaviour {
         if (collider.gameObject.tag == "obstacleFatale")
         {
             animator.SetBool("estTomber", true);
+            GestionLevel.collisonObstacleFatal();
 
         }
     }

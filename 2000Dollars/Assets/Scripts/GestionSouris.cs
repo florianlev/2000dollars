@@ -35,7 +35,7 @@ public class GestionSouris : MonoBehaviour
     {
 
         //deplacerPersoToutdroit();
-        transform.Translate(Vector3.MoveTowards(startPos, -transform.right, vitesse * Time.deltaTime));
+        transform.position = Vector3.MoveTowards(transform.position, TargetPosition, vitesse * Time.deltaTime);
 
 
         // Fait venir aveugle a la position du chien
