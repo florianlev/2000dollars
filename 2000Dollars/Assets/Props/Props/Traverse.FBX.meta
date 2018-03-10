@@ -12,7 +12,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: Traverse
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: c618627ae79c7e04589490fe8e04563d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
