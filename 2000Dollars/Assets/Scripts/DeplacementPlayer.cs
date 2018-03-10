@@ -24,7 +24,7 @@ public class DeplacementPlayer : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0, -vitesse, 0);
+            transform.Translate(-Vector3.right * Time.deltaTime * vitesse);
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -36,7 +36,7 @@ public class DeplacementPlayer : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0, vitesse, 0);
+            transform.Translate(Vector3.right * Time.deltaTime * vitesse);
         }
 
 
