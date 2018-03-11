@@ -32,17 +32,19 @@ public class CollisionsObstacles : MonoBehaviour
         }
         if (collider.gameObject.tag == "obstacleNonFatale")
         {
-            print("test");
             GestionSouris.arretDeplacement();
             animator.SetBool("estCollision", true);
             StartCoroutine(arretMarche());
         }
 
-        /*if(collider.gameObject.tag == "finNiveau")
+     
+
+        if(collider.gameObject.tag == "finNiveau")
         {
+            animator.SetBool("estMarcher", false);
             GestionSouris.arretDeplacement();
-            animator.SetBool("")
-        }*/
+            animator.SetBool("finNiveau", true);
+        }
 
     }
 

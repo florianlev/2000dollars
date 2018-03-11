@@ -8,6 +8,7 @@ TagManager:
   - zonePointAveugle
   - obstacleNonFatale
   - finNiveau
+  - avantFinNiveau
   layers:
   - Default
   - TransparentFX
