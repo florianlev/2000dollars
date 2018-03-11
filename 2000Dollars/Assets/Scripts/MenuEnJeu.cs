@@ -15,18 +15,16 @@ public class MenuEnJeu : MonoBehaviour {
 
     void Update () {
 
+        affichageVie.text = GestionLevel.vieCourante + " cannes restantes";
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             GestionLevel.pause = !GestionLevel.pause;
             Cursor.visible = !Cursor.visible;
             pause.SetActive(GestionLevel.pause);
 
-            affichageVie.text = GestionLevel.vieCourante + " cannes restantes";
+
 
         }
-
-
-
-
     }
 }
