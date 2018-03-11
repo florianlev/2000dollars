@@ -36,7 +36,10 @@ public class CollisionsObstacles : MonoBehaviour
             GestionSouris.arretDeplacement();
             animator.SetBool("estCollision", true);
             StartCoroutine(arretMarche());
+        }
 
+        if(collider.gameObject.tag == "finNiveau")
+        {
 
         }
 
