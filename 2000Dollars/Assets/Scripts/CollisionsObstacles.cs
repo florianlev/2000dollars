@@ -38,10 +38,11 @@ public class CollisionsObstacles : MonoBehaviour
             StartCoroutine(arretMarche());
         }
 
-        if(collider.gameObject.tag == "finNiveau")
+        /*if(collider.gameObject.tag == "finNiveau")
         {
-
-        }
+            GestionSouris.arretDeplacement();
+            animator.SetBool("")
+        }*/
 
     }
 
@@ -49,6 +50,7 @@ public class CollisionsObstacles : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         animator.SetBool("estMarcher", false);
+        animator.SetBool("estCollision", false);
 
     }
 
