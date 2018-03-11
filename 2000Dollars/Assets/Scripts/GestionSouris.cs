@@ -16,6 +16,7 @@ public class GestionSouris : MonoBehaviour
     public GameObject targetPositionObject;
     private Vector3 positionJoueur;
     private GameObject objetPositionPerso;
+    private bool estMarcher;
 
     private Animator animator;
     public AudioClip bark;
@@ -35,7 +36,7 @@ public class GestionSouris : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( !GestionLevel.pause)
+        if (!GestionLevel.pause)
         {
 
 
@@ -49,7 +50,7 @@ public class GestionSouris : MonoBehaviour
                 animator.SetBool("estMarcher", true);
                 positionJoueur = GameObject.Find("Player").transform.position;
                 objetPositionPerso = Instantiate(targetPositionObject, positionJoueur, Quaternion.identity);
-               
+
 
                 objetPositionPerso.name = "objetPositionPerso";
                 print(objetPositionPerso.transform.position);
@@ -71,17 +72,23 @@ public class GestionSouris : MonoBehaviour
 
     }
 
+    public static void arretDeplacement()
+    {
+        vitesse = arret;
+
+    }
+
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "zonePointAveugle")
         {
-            print("test");
+
             Destroy(objetPositionPerso);
             TargetPosition = positionFinNiveau.transform.position;
 
         }
-        
-        
+
+
     }
 
 

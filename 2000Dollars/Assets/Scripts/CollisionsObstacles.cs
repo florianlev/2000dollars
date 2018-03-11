@@ -12,6 +12,7 @@ public class CollisionsObstacles : MonoBehaviour
 
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("estTomber", false);
+        animator.SetBool("estCollision", false);
 
     }
 
@@ -28,15 +29,34 @@ public class CollisionsObstacles : MonoBehaviour
             animator.SetBool("estTomber", true);
 
             StartCoroutine(lancerGameOver(0.7f));
-
+        }
+        if (collider.gameObject.tag == "obstacleNonFatale")
+        {
+            print("test");
+            GestionSouris.arretDeplacement();
+            animator.SetBool("estCollision", true);
+            StartCoroutine(arretMarche());
 
 
         }
+
     }
+
+    private IEnumerator arretMarche()
+    {
+        yield return new WaitForSeconds(2);
+        animator.SetBool("estMarcher", false);
+
+    }
+
 
     private IEnumerator lancerGameOver(float secondes)
     {
         yield return new WaitForSeconds(secondes);
         GestionLevel.collisonObstacleFatal();
     }
+
+
+
+
 }
