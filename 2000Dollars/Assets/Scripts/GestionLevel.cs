@@ -191,7 +191,7 @@ public class GestionLevel : MonoBehaviour
 
     }
 
-    public static void collisonObstacleFatal()
+    public static void collisionObstacleFatal()
     {
         vieCourante = 0;
 

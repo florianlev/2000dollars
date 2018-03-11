@@ -35,6 +35,7 @@ public class CollisionsObstacles : MonoBehaviour
             GestionSouris.arretDeplacement();
             animator.SetBool("estCollision", true);
             StartCoroutine(arretMarche());
+            GestionLevel.collisionObstacleNonFatal();
         }
 
      
@@ -60,7 +61,7 @@ public class CollisionsObstacles : MonoBehaviour
     private IEnumerator lancerGameOver(float secondes)
     {
         yield return new WaitForSeconds(secondes);
-        GestionLevel.collisonObstacleFatal();
+        GestionLevel.collisionObstacleFatal();
     }
 
 
