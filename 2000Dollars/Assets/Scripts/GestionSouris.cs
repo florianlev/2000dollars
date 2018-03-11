@@ -70,6 +70,11 @@ public class GestionSouris : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
+        if (collider.gameObject.tag == "zonePointAveugle")
+        {
+            print("test");
+
+        }
         //Destroy(objetPositionPerso.gameObject);
         //TargetPosition = positionFinNiveau.transform.position;
     }

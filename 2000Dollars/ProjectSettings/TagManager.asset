@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - obstacleFatale
+  - zonePointAveugle
   layers:
   - Default
   - TransparentFX

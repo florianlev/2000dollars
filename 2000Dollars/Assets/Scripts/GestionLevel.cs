@@ -88,7 +88,7 @@ public class GestionLevel : MonoBehaviour
     }
     public void Update()
     {
-        print("testr");
+
 
         if (vieCourante <= 0)
         {
