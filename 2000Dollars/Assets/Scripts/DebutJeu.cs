@@ -8,9 +8,8 @@ public class DebutJeu : MonoBehaviour {
     {
 
         GestionLevel.recommencer();
-
+        GestionLevel.sceneCourante++;
         UnityEngine.SceneManagement.SceneManager.LoadScene(GestionLevel.sceneCourante);
-
 
     }
 }

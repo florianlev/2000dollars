@@ -12,7 +12,8 @@ public class Collision : MonoBehaviour {
         switch ( collision.collider.tag )
         {
             case "bonusLunettes":
-                GestionLevel.declencherBonusLunettes();             
+                GestionLevel.declencherBonusLunettes();   
+                
                 break;
 
             case "bonusBallon":

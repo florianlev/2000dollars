@@ -20,14 +20,14 @@ public class GestionLevel : MonoBehaviour
 
     public static bool pause = false;
 
-    public static float[] tableau_temps_lvl = new float[] { 120f, 120f, 120f };
+    public static float[] tableau_temps_lvl = new float[] { 120f, 180f, 210f };
 
     //----------- SENSIBILITE SOURIS --------------
     public static float sensibiliteSouris = 5;
 
-    private const int SCENE_DEPART = 1;
+    private const int SCENE_DEPART = 0;
     private const int VIE_DEPART = 3;
-    private const float VITESSE = 10f;
+    private const float VITESSE = 1.25f;
     private const float PORTE_AUDITION = 2000f;
 
     //----------- GESTION DES SCENES --------------------

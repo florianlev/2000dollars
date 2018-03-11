@@ -11,9 +11,17 @@ public class AllerMenuPrincipal : MonoBehaviour {
     {
 
         GestionLevel.recommencer();
+        
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            instruction.SetActive(false);
+            menuPrincipal.SetActive(true);
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
 
-        instruction.SetActive(false);
-        menuPrincipal.SetActive(true);
     }
 
 }
