@@ -7,6 +7,8 @@ public class GestionSouris : MonoBehaviour
 
     //public float vitesse = 10f;
     public static float vitesse = 1.25f;
+    public static float vitesseAveugle = 1.25f;
+    public static float arret = 0f;
     public GameObject positionFinNiveau;
     private Vector3 startPos;
     private Vector3 TargetPosition;
@@ -42,8 +44,9 @@ public class GestionSouris : MonoBehaviour
             // Fait venir aveugle a la position du chien
             if (Input.GetMouseButtonUp(0))
             {
+                vitesse = vitesseAveugle;
                 animator.SetBool("estMarcher", true);
-                positionJoueur = GameObject.Find("Player").transform.position;
+                positionJoueur = GameObject.Find("test").transform.position;
                 objetPositionPerso = Instantiate(targetPositionObject, positionJoueur, Quaternion.identity);
                 objetPositionPerso.name = "objetPositionPerso";
                 print(objetPositionPerso.transform.position);
@@ -57,7 +60,7 @@ public class GestionSouris : MonoBehaviour
             if (Input.GetMouseButtonUp(1))
             {
                 source.PlayOneShot(bark);
-                vitesse = 0f;
+                vitesse = arret;
                 animator.SetBool("estMarcher", false);
 
             }
@@ -73,10 +76,12 @@ public class GestionSouris : MonoBehaviour
         if (collider.gameObject.tag == "zonePointAveugle")
         {
             print("test");
+            Destroy(objetPositionPerso);
+            TargetPosition = positionFinNiveau.transform.position;
 
         }
-        //Destroy(objetPositionPerso.gameObject);
-        //TargetPosition = positionFinNiveau.transform.position;
+        
+        
     }
 
 
