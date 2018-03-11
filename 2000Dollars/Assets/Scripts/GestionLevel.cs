@@ -95,7 +95,7 @@ public class GestionLevel : MonoBehaviour
             print("test");
             sceneCourante = 4;
             UnityEngine.SceneManagement.SceneManager.LoadScene(3);
-
+            Cursor.visible = !Cursor.visible;
         }
 
 

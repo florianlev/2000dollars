@@ -7,7 +7,7 @@ public class Reesayer : MonoBehaviour {
 	public void Ressayer()
     {
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene(GestionLevel.sceneCourante);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
 }

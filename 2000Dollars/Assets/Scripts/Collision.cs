@@ -12,24 +12,28 @@ public class Collision : MonoBehaviour {
         switch ( collision.collider.tag )
         {
             case "bonusLunettes":
-                GestionLevel.declencherBonusLunettes();   
-                
+                GestionLevel.declencherBonusLunettes();
+                Destroy(GetComponent<Collider>());
                 break;
 
             case "bonusBallon":
                 GestionLevel.declencherBonusBallon();
+                Destroy(GetComponent<Collider>());
                 break;
 
             case "malusOs":
                 GestionLevel.declancherMalusOs();
+                Destroy(GetComponent<Collider>());
                 break;
 
             case "malusVitesse":
                 GestionLevel.declancherMalusVitesse();
+                Destroy(GetComponent<Collider>());
                 break;
 
             case "malusSourd":
                 GestionLevel.declancherMalusSourd();
+                Destroy(GetComponent<Collider>());
                 break;
 
             case "obstacleNonFatal":

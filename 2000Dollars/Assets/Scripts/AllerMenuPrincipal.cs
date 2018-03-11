@@ -9,6 +9,7 @@ public class AllerMenuPrincipal : MonoBehaviour {
 
     public void allerMenuPrincpal()
     {
+        print("hello");
 
         GestionLevel.recommencer();
         
