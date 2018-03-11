@@ -66,6 +66,8 @@ public class GestionLevel : MonoBehaviour
     public static bool malusVitesse = false;
     public static bool malusSourd = false;
 
+
+
     /**
      * 0 : Aucun bonus/malus actif
      * 1 : Bonus Lunettes
@@ -84,7 +86,7 @@ public class GestionLevel : MonoBehaviour
     //-------------- UPDATE ---------------------------
     public void Start()
     {
-        
+
     }
     public void Update()
     {
@@ -146,6 +148,8 @@ public class GestionLevel : MonoBehaviour
 
     public static void declencherBonusBallon()
     {
+
+        
         usActif = 2;
         bonusBallon = true;
         tempsCourantBonusBallon = TEMPS_BONUS_BALLON;

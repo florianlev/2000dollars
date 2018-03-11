@@ -9,6 +9,7 @@ TagManager:
   - obstacleNonFatale
   - finNiveau
   - avantFinNiveau
+  - bonusHelice
   layers:
   - Default
   - TransparentFX
