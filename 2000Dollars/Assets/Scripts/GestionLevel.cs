@@ -27,7 +27,7 @@ public class GestionLevel : MonoBehaviour
 
     private const int SCENE_DEPART = 0;
     private const int VIE_DEPART = 3;
-    private const float VITESSE = 2.0f;
+    private const float VITESSE = 2.5f;
     private const float PORTE_AUDITION = 2000f;
 
     //----------- GESTION DES SCENES --------------------
