@@ -13,7 +13,12 @@ ModelImporter:
     4300000: Mallus_Distraction
     7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #72'
+    second: {fileID: 2100000, guid: ed07d73edff029e42b9b0651f8a912b9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
