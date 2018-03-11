@@ -6,8 +6,8 @@ public class GestionSouris : MonoBehaviour
 {
 
     //public float vitesse = 10f;
-    public static float vitesse = 1.25f;
-    public static float vitesseAveugle = 1.25f;
+    public static float vitesse = GestionLevel.vitesseCourante;
+    private static float vitesseAveugle = vitesse;
     public static float arret = 0f;
     public GameObject positionFinNiveau;
     private Vector3 startPos;
