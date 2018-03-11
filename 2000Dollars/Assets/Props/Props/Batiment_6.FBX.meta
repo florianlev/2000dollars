@@ -12,7 +12,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: Batiment_M4
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 75fbb2dc1c20dc649b85606b215181c9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

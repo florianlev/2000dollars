@@ -12,7 +12,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: Banc
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 09d9b9c62e580584f9e5126b212c5856, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

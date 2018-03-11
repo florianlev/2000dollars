@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 6820b48423f43f848b4443e2bd74f4e5
-timeCreated: 1520695166
+guid: 2b69985e1fd9f724e8d0335f3c6c1e38
+timeCreated: 1520731034
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -12,7 +12,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: Fleuriste
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: d09dfd8c1a6e43d4395a8ec76bdcc739, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
