@@ -23,8 +23,6 @@ public class MenuEnJeu : MonoBehaviour {
             Cursor.visible = !Cursor.visible;
             pause.SetActive(GestionLevel.pause);
 
-
-
         }
     }
 }
