@@ -12,7 +12,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: Voiture
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 4104250ab5971f148ae1e258dbfe45b6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
