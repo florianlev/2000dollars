@@ -6,6 +6,9 @@ public class CollisionsObstacles : MonoBehaviour
 {
     private Animator animator;
 
+    public GameObject cameraJoueur;
+    public GameObject cameraFin;
+
     // Use this for initialization
     void Start()
     {
@@ -45,6 +48,8 @@ public class CollisionsObstacles : MonoBehaviour
             animator.SetBool("estMarcher", false);
             GestionSouris.arretDeplacement();
             animator.SetBool("finNiveau", true);
+            cameraJoueur.SetActive(false);
+            cameraFin.SetActive(true);
         }
 
     }
