@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a4c622b810f32fe4e9e07f9f9b34d1fb
-timeCreated: 1520724805
+guid: debc9e198a3815348b310cd6869cacf9
+timeCreated: 1520733922
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -10,14 +10,9 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: BarriereTravaux
+    4300000: Batiment_M4
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 182d99c986b67b746a002b6258fd8f28, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
