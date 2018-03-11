@@ -16,8 +16,8 @@ public class GestionSouris : MonoBehaviour
     private GameObject objetPositionPerso;
 
     private Animator animator;
-
-
+    public AudioClip bark;
+    public AudioSource source;
 
     // Use this for initialization
     void Start()
@@ -48,13 +48,14 @@ public class GestionSouris : MonoBehaviour
             print(objetPositionPerso.transform.position);
             TargetPosition = objetPositionPerso.transform.position;
             //endPos = TargetPosition + Vector3.forward * distance; 
-
+            source.PlayOneShot(bark);
         }
 
 
         // Fait arrêter aveugle
         if (Input.GetMouseButtonUp(1))
         {
+            source.PlayOneShot(bark);
             vitesse = 0f;
             animator.SetBool("estMarcher", false);
 
