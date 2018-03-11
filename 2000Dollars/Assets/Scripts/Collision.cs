@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour {
 
-    private Animator animator;
+    public static Animator animator;
 
 
     public void Awake()

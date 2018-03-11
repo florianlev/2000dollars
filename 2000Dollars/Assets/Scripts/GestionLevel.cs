@@ -86,7 +86,7 @@ public class GestionLevel : MonoBehaviour
     //-------------- UPDATE ---------------------------
     public void Start()
     {
-
+       
     }
     public void Update()
     {
@@ -233,6 +233,10 @@ public class GestionLevel : MonoBehaviour
             bonusBallon = false;
             tempsCourantBonusBallon = 0f;
             usActif = 0;
+
+            print("fin vol");
+
+            Collision.animator.SetBool("enVol", false);
         }
 
     }
