@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 28597d5ed5d6827488875a98018475cc
-timeCreated: 1520658576
+guid: 35f148e89386dd84b9c3e0922453fc61
+timeCreated: 1520756417
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -10,14 +10,14 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: borneFontaine
+    4300000: Plane001
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: c306c7ae00692824cb18ffbb9d5bace8, type: 2}
+    second: {fileID: 2100000, guid: abbbe0fccce0d0b44a4411837d783bc1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
