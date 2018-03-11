@@ -6,6 +6,7 @@ public class AllerMenuPrincipal : MonoBehaviour {
 
     public GameObject instruction;
     public GameObject menuPrincipal;
+    public GameObject credit;
 
     public void allerMenuPrincpal()
     {
@@ -17,6 +18,7 @@ public class AllerMenuPrincipal : MonoBehaviour {
         {
             instruction.SetActive(false);
             menuPrincipal.SetActive(true);
+            credit.SetActive(false);
         }
         else
         {
