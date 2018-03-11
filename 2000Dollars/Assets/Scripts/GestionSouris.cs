@@ -38,7 +38,11 @@ public class GestionSouris : MonoBehaviour
         if( !GestionLevel.pause)
         {
             //deplacerPersoToutdroit();
-            transform.position = Vector3.MoveTowards(transform.position, TargetPosition, vitesse * Time.deltaTime);
+            //transform.position = Vector3.MoveTowards(transform.position, TargetPosition, vitesse * Time.deltaTime);
+
+            //transform.Translate(transform.forward * vitesse * Time.deltaTime);
+
+            transform.position += transform.forward * vitesse * Time.deltaTime;
 
 
             // Fait venir aveugle a la position du chien
@@ -48,9 +52,15 @@ public class GestionSouris : MonoBehaviour
                 animator.SetBool("estMarcher", true);
                 positionJoueur = GameObject.Find("test").transform.position;
                 objetPositionPerso = Instantiate(targetPositionObject, positionJoueur, Quaternion.identity);
+               
+
                 objetPositionPerso.name = "objetPositionPerso";
                 print(objetPositionPerso.transform.position);
-                TargetPosition = objetPositionPerso.transform.position;
+                transform.LookAt(objetPositionPerso.transform);
+
+                //TargetPosition = objetPositionPerso.transform.position;
+                //transform.LookAt(objetPositionPerso.transform);
+
                 //endPos = TargetPosition + Vector3.forward * distance; 
                 source.PlayOneShot(bark);
             }
