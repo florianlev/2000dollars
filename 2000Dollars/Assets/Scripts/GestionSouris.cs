@@ -39,9 +39,7 @@ public class GestionSouris : MonoBehaviour
         if (!GestionLevel.pause)
         {
 
-
             transform.position += transform.forward * vitesse * Time.deltaTime;
-
 
             // Fait venir aveugle a la position du chien
             if (Input.GetMouseButtonUp(0))
