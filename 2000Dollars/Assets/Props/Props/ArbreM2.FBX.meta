@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 38bc301335fde9b4b81461c9fd96aa1a
-timeCreated: 1520706065
+guid: fd258ff3a6ed69448b59ccffa86facdd
+timeCreated: 1520738727
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -12,8 +12,19 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Arbre_M2
+    7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #12 Slot #1'
+    second: {fileID: 2100000, guid: 1f20a7d46f3fdd84c93a6c642449eafd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #12 Slot #2'
+    second: {fileID: 2100000, guid: 42317922de630f74d9e2fd3acaa8b778, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
