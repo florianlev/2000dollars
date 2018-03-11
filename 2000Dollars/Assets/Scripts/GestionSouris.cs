@@ -36,6 +36,8 @@ public class GestionSouris : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(GestionLevel.pause);
+
         if (!GestionLevel.pause)
         {
 
