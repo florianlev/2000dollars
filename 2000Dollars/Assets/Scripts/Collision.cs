@@ -4,21 +4,35 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour {
 
+    private Animator animator;
 
 
-    private void OnCollisionEnter(UnityEngine.Collision collision)
+    public void Awake()
+    {
+     
+    }
+
+    public void Start()
+    {
+        animator = gameObject.GetComponent<Animator>();
+
+    }
+
+    private void OnTriggerEnter(Collider collider)
     {
 
-        switch ( collision.collider.tag )
+        switch ( collider.gameObject.tag )
         {
             case "bonusLunettes":
                 GestionLevel.declencherBonusLunettes();
                 Destroy(GetComponent<Collider>());
                 break;
 
-            case "bonusBallon":
+            case "bonusHelice":
+                print("test");
                 GestionLevel.declencherBonusBallon();
-                Destroy(GetComponent<Collider>());
+                animator.SetBool("enVol", true);
+                Destroy(GameObject.Find("Bonus_helice"));
                 break;
 
             case "malusOs":
