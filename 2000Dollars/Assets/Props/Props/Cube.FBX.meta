@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: debc9e198a3815348b310cd6869cacf9
-timeCreated: 1520661954
+guid: 7f9d28b99b4006d45a98976fb1c3599b
+timeCreated: 1520733712
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Batiment_M4
+    4300000: Box001
     9500000: //RootNode
   externalObjects: {}
   materials:
