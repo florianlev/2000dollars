@@ -33,35 +33,38 @@ public class GestionSouris : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //deplacerPersoToutdroit();
-        transform.position = Vector3.MoveTowards(transform.position, TargetPosition, vitesse * Time.deltaTime);
-
-
-        // Fait venir aveugle a la position du chien
-        if (Input.GetMouseButtonUp(0))
+        if( !GestionLevel.pause)
         {
-            animator.SetBool("estMarcher", true);
-            positionJoueur = GameObject.Find("Player").transform.position;
-            objetPositionPerso = Instantiate(targetPositionObject, positionJoueur, Quaternion.identity);
-            objetPositionPerso.name = "objetPositionPerso";
-            print(objetPositionPerso.transform.position);
-            TargetPosition = objetPositionPerso.transform.position;
-            //endPos = TargetPosition + Vector3.forward * distance; 
-            source.PlayOneShot(bark);
+            //deplacerPersoToutdroit();
+            transform.position = Vector3.MoveTowards(transform.position, TargetPosition, vitesse * Time.deltaTime);
+
+
+            // Fait venir aveugle a la position du chien
+            if (Input.GetMouseButtonUp(0))
+            {
+                animator.SetBool("estMarcher", true);
+                positionJoueur = GameObject.Find("Player").transform.position;
+                objetPositionPerso = Instantiate(targetPositionObject, positionJoueur, Quaternion.identity);
+                objetPositionPerso.name = "objetPositionPerso";
+                print(objetPositionPerso.transform.position);
+                TargetPosition = objetPositionPerso.transform.position;
+                //endPos = TargetPosition + Vector3.forward * distance; 
+                source.PlayOneShot(bark);
+            }
+
+
+            // Fait arrêter aveugle
+            if (Input.GetMouseButtonUp(1))
+            {
+                source.PlayOneShot(bark);
+                vitesse = 0f;
+                animator.SetBool("estMarcher", false);
+
+            }
+
+            //this.transform.Translate(Vector3.MoveTowards(this.transform.position, positionFinNiveau.transform.position, vitesse * Time.deltaTime));
+
         }
-
-
-        // Fait arrêter aveugle
-        if (Input.GetMouseButtonUp(1))
-        {
-            source.PlayOneShot(bark);
-            vitesse = 0f;
-            animator.SetBool("estMarcher", false);
-
-        }
-
-        //this.transform.Translate(Vector3.MoveTowards(this.transform.position, positionFinNiveau.transform.position, vitesse * Time.deltaTime));
 
     }
 
